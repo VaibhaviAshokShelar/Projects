@@ -1,0 +1,195 @@
+<div
+    style="margin: 20px;background-image: url('./../../../assets/images/bg1.jpg');border-radius: 30px;margin-left: 20%;margin-right: 20%;">
+    <br>
+    <button type="button" id="docbackbtn" name="doctorBackBtn" (click)="onBack()"> back to admin dashboard</button>
+    <table align="center">
+        <tr>
+            <td><span style="color:darkred;font-family: cursive;font-size: 20px;">Register Doctor here...</span>
+            </td>
+        </tr>
+    </table>
+
+    <!-- ////////ngNativeValidate  for required to work -->
+    <form #dregisterform="ngForm" (ngSubmit)="addDoctor()" ngNativeValidate>
+
+        <table align="center" cellpadding="5px" cellspacing="5px">
+
+
+
+            <tr>
+                <td>
+                    <label>Name:</label>
+
+                </td>
+                <td>
+                    <input type="text" placeholder="Name:" id="docnm" name="dname" [(ngModel)]="dname" required
+                        autocomplete="off" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Gender:</label>
+                </td>
+                <td>
+                    <input type="radio" id="docmale" name="dgender" value="MALE" [(ngModel)]="dgender">
+                    &nbsp;
+                    <label>Male</label>
+                    &nbsp; &nbsp;
+                    <input type="radio" id="docfemale" name="dgender" value="FEMALE" [(ngModel)]="dgender">
+                    &nbsp;
+                    <label>Female</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Email Id:</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Email-Id:" id="docemail" name="demail" [(ngModel)]="demail" required
+                        autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Experience in years:</label>
+                </td>
+                <td>
+                    <input type="number" placeholder="Experience:" id="docexp" name="dexp" [(ngModel)]="dexp" required
+                        autocomplete="off" />
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Designation:</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Designation:" id="docdesig" name="ddesig" [(ngModel)]="ddesig"
+                        required autocomplete="off" />
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <label> Consultation Charges:</label>
+                </td>
+                <td>
+                    <input type="number" placeholder="Consultation Charges:" id="doccharges" name="dcharges"
+                        [(ngModel)]="dcharges" required autocomplete="off" />
+
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="specialization">Specialization:</label>
+
+                </td>
+                <td>
+
+                    <select id="specialization" name="dspecial" [(ngModel)]="dspecial" required>
+                        <option value="" disabled selected>Select:</option>
+                        <option value="1">Neurologist</option>
+                        <option value="2">Pediatrician</option>
+                        <option value="3">General Physician</option>
+                        <option value="4">Psycologist</option>
+                        <option value="5">Opthalmologist</option>
+                        <option value="4">Oncologist</option>
+                        <option value="4">Gynacologist</option>
+                        <option value="4">Urologist</option>
+                      
+                    </select>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <label>Username:</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Username:" id="docusername" name="duname" [(ngModel)]="duname"
+                        required autocomplete="off" />
+                </td>
+            </tr>
+            <tr>
+                <td> <label>Password:</label>
+                </td>
+                <td>
+
+                    <input type="password" placeholder="Password" id="docpswd" name="dpswd" [(ngModel)]="dpswd" required
+                        autocomplete="off" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="reset" id="docresetbtn" name="doctorResetBtn">
+
+                        <span style="color: darkblue;font-family: cursive;">Reset</span></button>
+                </td>
+                <td>
+                    <button type="submit" id="docsubmitbtn" name="doctorSubmitBtn">
+
+                        <span style="color: darkblue;font-family: cursive;">Register</span></button>
+                </td>
+
+            </tr>
+        </table>
+
+    </form>
+
+    &nbsp;
+</div>
+
+<!-- <tr>
+            <td>
+                <label >Id:</label>
+    
+            </td>
+            <td>
+                <input  type="number" placeholder="Id:" id="docid" name="did" [(ngModel)]="did"> 
+     
+            </td>
+        </tr>
+         -->
+
+<!-- <tr>
+            <td>
+                <label >Contact No:</label>
+            </td>
+            <td>
+                <input  type="text" placeholder="Contact No.:" id="doccontactno" name="dcontact" [(ngModel)]="dcontact">
+       
+            </td>
+        </tr> -->
+
+<!-- <tr> 
+            <td>
+                <label  for="role">Role:</label>
+            </td>
+
+
+                <td>
+                <select id="role" name="drole" [(ngModel)]="drole">
+                    <option value="" disabled selected>Select:</option>
+                    <option value="doctor">Doctor</option>
+                </select>
+                // <td>
+                  //  <input type="checkbox"  id="docrole" name="doctorRole" value="Doctor" checked  [(ngModel)]="drole">
+                  //  &nbsp;
+                   // <label for="docrole" >Doctor</label> </td>
+
+                </td>
+        </tr> -->
